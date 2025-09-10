@@ -6,13 +6,9 @@ export default defineConfig({
     // required for injected css file into gemini page
     web_accessible_resources: [
       {
-        'resources': [
-          '/injected-styles.css',
-        ],
-        'matches': [
-          '*://*.gemini.google.com/*'
-        ]
-      }
-    ]
+        resources: ['/injected-styles.css'],
+        matches: ['*://*.gemini.google.com/*'],
+      },
+    ],
   },
 });

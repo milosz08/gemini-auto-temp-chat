@@ -170,7 +170,7 @@ const findElement = (selector: string, timeout = 5_000): Promise<HTMLElement> =>
 };
 
 export default defineContentScript({
-  matches: ['*://*.gemini.google.com/*'],
+  matches: ['*://*.gemini.google.com/u/*/app/*', '*://*.gemini.google.com/app/*'],
   async main() {
     injectStyles();
     showFullScreenLoader();
