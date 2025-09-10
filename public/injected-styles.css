@@ -1,0 +1,75 @@
+#gem-atc__loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bard-color-tooltip-box-shado);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 2147483647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gem-atc__loader-spinner {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: var(--gem-sys-color--inverse-surface);
+  animation: gem-atc-loader-spin 1s linear infinite;
+}
+
+.gem-atc__startup-temp-chat-button {
+  font-family: var(--gem-sys-typography-type-scale--body-m-font-name);
+  font-size: var(--gem-sys-typography-type-scale--body-m-font-size);
+  font-weight: var(--gem-sys-typography-type-scale--body-m-font-weight);
+  letter-spacing: var(--gem-sys-typography-type-scale--body-m-font-tracking);
+  line-height: var(--gem-sys-typography-type-scale--body-m-line-height);
+  height: 40px;
+  padding: 5px 20px;
+  color: var(--gem-sys-color--on-surface-variant);
+  background-color: transparent;
+  border-radius: 20px;
+  margin: 20px 10px 0 10px;
+  cursor: pointer;
+  text-align: center;
+}
+.gem-atc__startup-temp-chat-button:hover {
+  background-color: var(--bard-color-neutral-90);
+}
+.gem-atc__startup-temp-chat-button--active {
+  background-color: #1f3760;
+  border-color: #1f3760;
+}
+.gem-atc__startup-temp-chat-button--active:hover {
+  background-color: #233d6b;
+  border-color: #233d6b;
+}
+.gem-atc__startup-temp-chat-button--hidden {
+  display: none;
+}
+
+.gem-atc__startup-temp-chat-link {
+  font-family: var(--gem-sys-typography-type-scale--body-m-font-name);
+  font-size: 13px;
+  margin-top: 5px;
+  color: #a8c7fa;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+}
+.gem-atc__startup-temp-chat-link:hover {
+  text-decoration: none;
+}
+
+@keyframes gem-atc-loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

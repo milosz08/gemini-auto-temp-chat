@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini auto temporary chat</title>
+    <meta name="manifest.type" content="browser_action" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="logo__circle">
+      <img src="./logo.svg" alt="logo" class="logo__image"/>
+    </div>
+    <div class="button__container">
+      <p class="button__text">Start a temporary chat after page load?</p>
+      <button type="button" id="startTempChatButton" class="button__element">Yes, always use temporary chat</button>
+      <a id="reloadWindowButton" role="button" href="#" class="link__element link--hidden">Reload window</a>
+    </div>
+    <div class="link__container">
+      <a href="https://github.com/milosz08/gemini-auto-temp-chat" target="_blank" class="link__element">Source code</a>
+      <a href="https://github.com/sponsors/milosz08" target="_blank" class="link__element">Become a sponsor</a>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
