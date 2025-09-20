@@ -43,6 +43,7 @@
 .gem-atc__startup-temp-chat-button--active {
   background-color: #1f3760;
   border-color: #1f3760;
+  color: var(--gem-sys-color--on-primary-container);
 }
 .gem-atc__startup-temp-chat-button--active:hover {
   background-color: #233d6b;
