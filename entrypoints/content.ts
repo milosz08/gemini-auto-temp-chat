@@ -170,9 +170,18 @@ const findElement = (selector: string, timeout = 5_000): Promise<HTMLElement> =>
 };
 
 export default defineContentScript({
-  matches: ['*://*.gemini.google.com/u/*/app/*', '*://*.gemini.google.com/app/*'],
+  matches: [
+    '*://*.gemini.google.com/u/*/app/*',
+    '*://*.gemini.google.com/u/*',
+    '*://*.gemini.google.com/app/*',
+  ],
   async main() {
     injectStyles();
+    const el = document.querySelector('.boqOnegoogleliteOgbOneGoogleBar [aria-label="Sign in"]');
+    if (el != null) {
+      // prevent run script when user is not logged
+      return;
+    }
     showFullScreenLoader();
 
     await insertToggleButton();

@@ -44,10 +44,6 @@ $ yarn run dev
 
 ## Known issues
 
-- [ ] When a user is not logged in, a redirect from gemini.google.com can cause the extension to activate undesirably on
-the landing page. The extension should only activate after the user has successfully logged in and the main chat
-interface is loaded.
-
 - [ ] The button added by the extension disappears when the user dynamically resizes the browser window. A page refresh
 is required for the button to reappear.
 
